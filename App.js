@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * React Native X Boilerplate
+ * https://github.com/Ahiho/ReactNativeX
  * @flow
  */
 
