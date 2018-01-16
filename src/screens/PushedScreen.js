@@ -1,9 +1,3 @@
-/**
- * React Native X Boilerplate
- * https://github.com/Ahiho/ReactNativeX
- * @flow
- */
-
 import React from 'react';
 import {
   Platform,
@@ -31,14 +25,14 @@ const styles = StyleSheet.create({
   },
 });
 
-function App() {
+function PushedScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>
         Welcome to React Native!
       </Text>
       <Text style={styles.instructions}>
-        To get started, edit App.js
+        To get started, edit PushedScreen.js
       </Text>
       <Text style={styles.instructions}>
         {Platform.select({
@@ -52,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default PushedScreen;
