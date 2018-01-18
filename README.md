@@ -32,3 +32,49 @@ cd ReactNativeX
 yarn install
 react-native run-ios || run- android
 ```
+
+## Rename Project
+
+Rename react-native app with just one command
+
+> This package assumes that you created your react-native project using `react-native init`.
+
+#### Installation
+
+```
+yarn global add react-native-rename
+or
+npm install react-native-rename -g
+```
+
+Switch to new branch first
+
+> better to have back-up
+
+```
+git checkout -b rename-app
+```
+
+#### Usage
+
+```
+react-native-rename <newName>
+```
+
+> With custom Bundle Identifier (Android)
+
+```
+react-native-rename <newName> -b <bundleIdentifier>
+```
+
+#### Example
+
+```
+react-native-rename "Amazing App"
+```
+
+> With custom Bundle Identifier
+
+```
+react-native-rename "Amazing App" -b com.amazinginc.amazingapp
+```
