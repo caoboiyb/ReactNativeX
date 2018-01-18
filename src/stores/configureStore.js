@@ -17,8 +17,5 @@ if (__DEV__) {
 }
 
 export default function configureStore() {
-  return createStore(
-    rootReducer,
-    applyMiddleware(...middleware),
-  );
+  return createStore(rootReducer, applyMiddleware(...middleware));
 }

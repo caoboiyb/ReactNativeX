@@ -16,9 +16,8 @@ function getMovies() {
     })
     .then(responseJson => responseJson.movies)
     .catch((error) => {
-      console.error(error);
+      console.error(error); // eslint-disable-line
     });
 }
 
 export default { getMovies };
-

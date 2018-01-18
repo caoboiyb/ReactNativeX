@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes, { shape } from 'prop-types';
-import {
-  ActivityIndicator, ListView, Text, View,
-} from 'react-native';
+import { ActivityIndicator, ListView, Text, View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import homeActions from '../../actions/home';
@@ -27,7 +25,11 @@ class Home extends Component<{}> {
       <View style={styles.container}>
         <ListView
           dataSource={dataSource}
-          renderRow={rowData => <Text>{rowData.title}, {rowData.releaseYear}</Text>}
+          renderRow={rowData => (
+            <Text>
+              {rowData.title}, {rowData.releaseYear}
+            </Text>
+          )}
         />
       </View>
     );
@@ -55,6 +57,6 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = dispatch => (bindActionCreators(homeActions, dispatch));
+const mapDispatchToProps = dispatch => bindActionCreators(homeActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

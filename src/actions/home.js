@@ -20,4 +20,3 @@ function getMovies() {
 export default {
   getMovies,
 };
-

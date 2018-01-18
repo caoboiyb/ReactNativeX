@@ -14,4 +14,3 @@ function homeReducer(state = { isLoading: true, movies: [] }, action) {
 }
 
 export default homeReducer;
-
