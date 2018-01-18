@@ -35,15 +35,27 @@ matrix:
       android:
         components:
           - tools
-          - platform-tools
           - build-tools-25.0.1
-          - android-25
-          - build-tools-26.0.1
-          - android-26
+          - platform-tools
           - extra-android-m2repository
-          - extra-google-google_play_services
-          - extra-google-m2repository
-          - addon-google_apis-google-16
+          - extra-google-android-support
+          # The BuildTools version used by your project
+          #- build-tools-19.1.0
+
+          # The SDK version used to compile your project
+          - android-16
+          - android-21
+          - android-22
+          - android-25
+
+          # Additional components
+
+          # Specify at least one system image,
+          # if you need to run emulator(s) during your tests
+          - sys-img-armeabi-v7a-android-16
+          - sys-img-armeabi-v7a-android-21
+          - sys-img-armeabi-v7a-android-22
+          - sys-img-armeabi-v7a-android-25
       script:
         - cd android && ./gradlew assembleDebug && ./gradlew assembleRelease
     - language: objective-c
@@ -58,9 +70,9 @@ matrix:
       install:
         - travis_retry gem install xcpretty
         - travis_retry yarn
-      xcode_project: ios/PepperoniAppTemplate.xcodeproj
-      xcode_scheme: ios/PepperoniAppTemplateTests
+      xcode_project: ios/ReactNativeX.xcodeproj
+      xcode_scheme: ios/ReactNativeXTests
       script:
         - cd ios
-        - xcodebuild -scheme PepperoniAppTemplate -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-        - travis_retry xctool run-tests -scheme PepperoniAppTemplate -sdk iphonesimulator -launch-timeout 90  ONLY_ACTIVE_ARCH=NO
+        - xcodebuild -scheme ReactNativeX -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+        - travis_retry xctool run-tests -scheme ReactNativeX -sdk iphonesimulator -launch-timeout 90  ONLY_ACTIVE_ARCH=NO
