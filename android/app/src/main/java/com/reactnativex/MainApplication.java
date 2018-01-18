@@ -4,6 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
+import io.realm.react.RealmReactPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,7 +21,7 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
-    // eg. new VectorIconsPackage()
+      new RealmReactPackage()
     );
   }
 
