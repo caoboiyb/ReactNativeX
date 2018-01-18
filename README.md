@@ -1,6 +1,6 @@
 # ReactNativeX
 
-[![Build Status](https://travis-ci.org/Ahiho/ReactNativeX.svg?branch=fresh-boilerplate)](https://travis-ci.org/Ahiho/ReactNativeX)
+[![Build Status](https://travis-ci.org/Ahiho/ReactNativeX.svg?branch=redux-integration)](https://travis-ci.org/Ahiho/ReactNativeX)
 
 A React Native boilerplate that's config with Redux + ESlint (Airbnb style) + Facebook Flow + Prettier
 
